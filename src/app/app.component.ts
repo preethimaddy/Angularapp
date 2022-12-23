@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 
 
@@ -10,4 +10,31 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'testApp';
   serverElements= [{type: 'server', name:'Testserver', content: 'Just a TestBed'}];
+
+constructor(){
+
+
+  
 }
+
+ngOnInit(){
+
+}
+onServerAdded(serverData: {serverName: string, serverContent: string}){
+
+  this.serverElements.push({
+   type:'server',
+   name: serverData.serverName,
+   content: serverData.serverContent
+ });
+ }
+ onBluePrintAdded(bluePrintData: {serverName: string, serverContent: string}){
+   this.serverElements.push({
+     type:'blueprint',
+     name: bluePrintData.serverName,
+     content:bluePrintData.serverContent
+   });
+ }
+
+}
+
