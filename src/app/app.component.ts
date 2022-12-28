@@ -35,6 +35,8 @@ onServerAdded(serverData: {serverName: string, serverContent: string}){
      content:bluePrintData.serverContent
    });
  }
-
+ onChangeFirst(){
+  this.serverElements[0].name='changed';
+ }
 }
 

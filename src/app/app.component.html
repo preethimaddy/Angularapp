@@ -1,10 +1,14 @@
 <app-header></app-header>
 <div class="container">
   <app-cockpit (serverCreated)="onServerAdded($event)"
-  (bluePrintCreated)="onBluePrintAdded($event)"></app-cockpit>
+  (bluePrintCreated)="onBluePrintAdded($event)"></app-cockpit> &nbsp;
   <div class="row">
-    <div class="col-md-12">
-      <app-server-element *ngFor="let serverElement of serverElements" [srcElement]="serverElement">
+    <div class="col-xs-12">
+     
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
+      <app-server-element *ngFor="let serverElement of serverElements"
+       [srcElement]="serverElement"
+       [name]="serverElement.name">
         <p>
           <strong *ngIf="serverElement.type==='server'" style="color:red">
       {{serverElement.content}}

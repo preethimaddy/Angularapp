@@ -31,6 +31,7 @@ onAddServer(nameInput: HTMLInputElement){
 }
 onAddBluePrint(nameInput: HTMLInputElement){
   console.log(nameInput.value);
+  // this.serverContentInput.nativeElement.value ='something';   //not a best practice use string interpolation;
   this.bluePrintCreated.emit({serverName: nameInput.value,
     serverContent: this.serverContentInput.nativeElement.value });
   // this.bluePrintCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent });
