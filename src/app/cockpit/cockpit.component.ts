@@ -6,14 +6,14 @@ import { Component, EventEmitter, Output, OnInit, ViewChild, ElementRef } from '
   styleUrls: ['./cockpit.component.scss']
 })
 export class CockpitComponent {
-
-
+@Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+@Output('bluePrintCreated') bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
 newServerName ='';
 newServerContent ='';
   serverElements: any;
-@Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-@Output() bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-@ViewChild('serverContentInput') serverContentInput: ElementRef;
+
+  @ViewChild('serverContentInput')
+  serverContentInput: ElementRef;
 
 constructor(){
 
@@ -22,7 +22,7 @@ ngOnInit(){
 
 }
 onAddServer(nameInput: HTMLInputElement){
-  console.log(this.serverContentInput) ;
+  console.log(nameInput.value) ;
   this.serverCreated.emit({
     serverName: nameInput.value,
     serverContent: this.serverContentInput.nativeElement.value });
@@ -30,8 +30,7 @@ onAddServer(nameInput: HTMLInputElement){
 //  this.serverCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent });
 }
 onAddBluePrint(nameInput: HTMLInputElement){
-  console.log(this.serverContentInput);
-  this.serverContentInput.nativeElement.value='something';
+  console.log(nameInput.value);
   this.bluePrintCreated.emit({serverName: nameInput.value,
     serverContent: this.serverContentInput.nativeElement.value });
   // this.bluePrintCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent });

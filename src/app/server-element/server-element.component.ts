@@ -6,8 +6,8 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./server-element.component.scss'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class ServerElementComponent {
-  @Input('srcElement') element: { type: string; name: string; content: string; } ;
+export class ServerElementComponent  implements OnInit{
+  @Input('srcElement') element: { type: string; name: string; content: string; }  ;
   constructor(){
 
   }
