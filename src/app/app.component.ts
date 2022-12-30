@@ -10,7 +10,9 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'testApp';
   serverElements= [{type: 'server', name:'Testserver', content: 'Just a TestBed'}];
-
+onIntervalFired(firedNumber: number){
+  console.log(firedNumber);
+}
 constructor(){
 
 

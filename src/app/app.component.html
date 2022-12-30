@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <div class="container">
   <app-cockpit (serverCreated)="onServerAdded($event)"
   (bluePrintCreated)="onBluePrintAdded($event)"></app-cockpit> &nbsp;
@@ -33,6 +34,12 @@
   
   
 </div>
+
+&nbsp;
+<div>
+  <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+</div>
+
 <div></div>
 
 <router-outlet></router-outlet>

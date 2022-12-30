@@ -23,6 +23,6 @@ ngOnInit(){
    }, 1000); 
   }
   onPause(){
-
+clearInterval(this.interval);
   }
 }

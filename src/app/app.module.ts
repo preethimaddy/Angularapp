@@ -15,6 +15,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { GameControlComponent } from './thirdtask/game-control/game-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ServerElementComponent } from './server-element/server-element.componen
     ShoppingListComponent,
     ShoppingEditComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    GameControlComponent
   ],
   imports: [
     BrowserModule,
