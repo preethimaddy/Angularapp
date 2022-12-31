@@ -8,7 +8,7 @@
      
       <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
       <button class="btn btn-danger" (click)="onChangeSecond()">Destroy first element</button>
-      <app-server-element *ngFor="let serverElement of serverElements"
+      <!-- <app-server-element *ngFor="let serverElement of serverElements"
        [srcElement]="serverElement"
        [name]="serverElement.name">
         <p #contentParagraph>
@@ -19,7 +19,7 @@
       </p>
 
 
-      </app-server-element>
+      </app-server-element> -->
       <!-- <app-recipes> </app-recipes>
       &nbsp; -->
       <!-- <app-shopping-list></app-shopping-list> -->
@@ -39,7 +39,12 @@
 <div>
   <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
 </div>
-
+<div class="col-xs-12">
+ <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd> 
+</div>
+<div class="col-xs-12">
+  <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even> 
+ </div>
 <div></div>
 
 <router-outlet></router-outlet>

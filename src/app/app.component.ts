@@ -10,9 +10,19 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'testApp';
   serverElements= [{type: 'server', name:'Testserver', content: 'Just a TestBed'}];
-onIntervalFired(firedNumber: number){
-  console.log(firedNumber);
-}
+
+  oddNumbers: number[] =[];
+  evenNumbers: number[] =[];
+
+ onIntervalFired(firedNumber: number){
+  if(firedNumber % 2 === 0){
+  this.evenNumbers.push(firedNumber);
+  } else {
+    this.oddNumbers.push(firedNumber);
+  }
+
+  // console.log(firedNumber);
+ }
 constructor(){
 
 
