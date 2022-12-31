@@ -14,6 +14,8 @@ export class AppComponent {
   oddNumbers: number[] =[];
   evenNumbers: number[] =[];
 
+  loadedFeature = 'recipe';
+
  onIntervalFired(firedNumber: number){
   if(firedNumber % 2 === 0){
   this.evenNumbers.push(firedNumber);
@@ -52,6 +54,9 @@ onServerAdded(serverData: {serverName: string, serverContent: string}){
  }
  onChangeSecond(){
   this.serverElements[0].name='changed';
+ }
+ onNavigate(feature: string){
+this.loadedFeature= feature;
  }
 }
 
