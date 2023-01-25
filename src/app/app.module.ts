@@ -18,6 +18,8 @@ import { ServerElementComponent } from './server-element/server-element.componen
 import { GameControlComponent } from './thirdtask/game-control/game-control.component';
 import { OddComponent } from './thirdtask/odd/odd.component';
 import { EvenComponent } from './thirdtask/even/even.component';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { AuthComponent } from './auth/auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,12 +36,13 @@ import { EvenComponent } from './thirdtask/even/even.component';
     ServerElementComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,NgOtpInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
