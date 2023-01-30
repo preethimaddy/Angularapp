@@ -44,6 +44,7 @@
 </div> -->
 
 &nbsp;
+
 <div>
   <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
 </div>
@@ -54,6 +55,7 @@
   <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even> 
  </div>
  <app-auth></app-auth>
+ 
 <div></div>
 
 <router-outlet></router-outlet>
